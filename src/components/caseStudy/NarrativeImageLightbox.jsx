@@ -155,7 +155,11 @@ export default function NarrativeImageLightbox({
     <figure className="case-narrative-figure">
       <button
         type="button"
-        className="case-narrative-thumb"
+        className={
+          diagramFigure
+            ? 'case-narrative-thumb case-narrative-thumb--diagram'
+            : 'case-narrative-thumb'
+        }
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
         aria-expanded={open}

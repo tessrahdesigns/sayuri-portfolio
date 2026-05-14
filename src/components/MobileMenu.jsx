@@ -6,9 +6,8 @@ import { publicUrl } from '../utils/publicUrl.js'
 const RESUME_PDF = '/Tessrah_Mahalingam_-_Senior_Product_Designer_2026.pdf'
 
 const MENU_LINKS = [
-  { to: '/projects', num: '01', label: 'Projects' },
-  { to: '/about', num: '02', label: 'About' },
-  { to: '/contact', num: '03', label: 'Contact' },
+  { to: '/about', num: '01', label: 'About' },
+  { to: '/contact', num: '02', label: 'Contact' },
 ]
 
 const SOCIAL_LINKS = [

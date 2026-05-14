@@ -2,7 +2,7 @@ export const PROJECT_ITEMS = [
   {
     id: 'prj-001',
     slug: 'audi-dealer-ecosystem',
-    meta: 'ID: PRJ_001 / 2023–2024',
+    meta: 'ID: PRJ_001 / 12 months',
     title: 'Audi North America Dealer Ecosystem',
     tagsLine: 'Automotive • Information Architecture • Enterprise UX',
     image: '/images/audi-dealer-ecosystem-hero.png',
@@ -11,7 +11,7 @@ export const PROJECT_ITEMS = [
   {
     id: 'prj-002',
     slug: 'dealer-theme-portal',
-    meta: 'ID: PRJ_002 / Mar 2025',
+    meta: 'ID: PRJ_002 / 1 month',
     title: 'Automotive Dealer Theme Management Portal',
     tagsLine: 'Automotive • Admin UX • Adobe Spectrum',
     image: '/images/dealer-theme-management-portal-hero.png',
@@ -20,7 +20,7 @@ export const PROJECT_ITEMS = [
   {
     id: 'prj-003',
     slug: 'yuniter',
-    meta: 'ID: PRJ_003 / 2021–2022',
+    meta: 'ID: PRJ_003 / 12 months',
     title: 'Yuniter',
     tagsLine: 'SaaS • Marketing Ops • UX Research',
     image: '/images/yuniter-hero.png',
@@ -29,7 +29,7 @@ export const PROJECT_ITEMS = [
   {
     id: 'prj-004',
     slug: 'customer-care-centre-mobile-app',
-    meta: 'ID: PRJ_004 / Jan–Feb 2025',
+    meta: 'ID: PRJ_004 / 1 month',
     title: 'Customer Care Centre Mobile App',
     tagsLine: 'Mobile • Customer experience • Service design',
     image: '/images/customer-care-centre-mobile-app-hero.png',
@@ -38,7 +38,7 @@ export const PROJECT_ITEMS = [
   {
     id: 'prj-005',
     slug: 'pcos-app-coach',
-    meta: 'ID: PRJ_005 / Feb 2025',
+    meta: 'ID: PRJ_005 / 1 day',
     title: 'Nourish',
     tagsLine: 'PCOS · AI nutrition · Conversational coach',
     image: '/images/nourish-pcos-hero.png',

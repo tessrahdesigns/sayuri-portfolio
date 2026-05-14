@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { publicUrl } from '../../utils/publicUrl.js'
 import NarrativeImageLightbox from './NarrativeImageLightbox.jsx'
 
-/** @typedef {{ type: 'h1'|'h2'|'p'|'ul'|'figure'|'embed'|'link'|'video', text?: string, items?: (string|{ lead: string, detail?: string, detailParts?: { text: string, mediumBold?: boolean }[] })[], parts?: { text: string, bold?: boolean }[], src?: string, alt?: string, caption?: string, title?: string, href?: string, layout?: 'inline', embedVariant?: 'mobile' }} NarrativeBlock */
+/** @typedef {{ type: 'h1'|'h2'|'p'|'ul'|'figure'|'embed'|'link'|'video', text?: string, items?: (string|{ lead: string, detail?: string, detailParts?: { text: string, mediumBold?: boolean }[] })[], parts?: { text: string, bold?: boolean, href?: string }[], src?: string, alt?: string, caption?: string, title?: string, href?: string, layout?: 'inline', embedVariant?: 'mobile' }} NarrativeBlock */
 
 function loomShareToEmbedUrl(shareUrl) {
   const m = shareUrl.match(/loom\.com\/share\/([a-zA-Z0-9_-]+)/)
@@ -64,13 +64,26 @@ function NarrativeBlocks({ blocks }) {
           if (block.parts?.length) {
             return (
               <p key={i}>
-                {block.parts.map((part, j) =>
-                  part.bold ? (
+                {block.parts.map((part, j) => {
+                  if (part.href) {
+                    return (
+                      <a
+                        key={j}
+                        href={part.href}
+                        className="case-narrative-external-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {part.text}
+                      </a>
+                    )
+                  }
+                  return part.bold ? (
                     <strong key={j}>{part.text}</strong>
                   ) : (
                     <span key={j}>{part.text}</span>
-                  ),
-                )}
+                  )
+                })}
               </p>
             )
           }

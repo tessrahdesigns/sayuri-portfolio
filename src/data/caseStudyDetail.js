@@ -8,7 +8,7 @@ import yuniterIncrementalPermissionsDiagramUrl from '../assets/yuniter-increment
  *   type: 'h1'|'h2'|'p'|'ul'|'figure'|'embed'|'link'|'video',
  *   text?: string,
  *   items?: (string|{ lead: string, detail?: string, detailParts?: { text: string, mediumBold?: boolean }[] })[],
- *   parts?: { text: string, bold?: boolean }[],
+ *   parts?: { text: string, bold?: boolean, href?: string }[],
  *   src?: string,
  *   alt?: string,
  *   caption?: string,
@@ -787,6 +787,7 @@ export const CASE_STUDY_BY_SLUG = {
         type: 'figure',
         src: '/images/customer-care-ideal-user-flow.png',
         lightboxSrc: '/images/customer-care-ideal-user-flow-hires.png',
+        diagramFigure: true,
         alt:
           'User-flow diagram for Audi Customer Care mobile: journeys from app open through Dashboard and Warning Centre, Search & Help Centre, chat support, and App-to-Case.',
         caption:
@@ -1011,6 +1012,21 @@ export const CASE_STUDY_BY_SLUG = {
       collaborators: ['Proof of concept'],
     },
     narrativeIntroBlocks: [
+      {
+        type: 'p',
+        parts: [
+          { text: 'Note: ', bold: true },
+          {
+            text:
+              'This condition is now often referred to as PMOS (polycystic metabolic ovary syndrome). When I created Nourish, PCOS was the usual clinical name—this case study keeps that wording so it matches when the app was built. ',
+          },
+          {
+            text: 'Read more on Wikipedia',
+            href: 'https://en.wikipedia.org/wiki/Polycystic_ovary_syndrome',
+          },
+          { text: '.' },
+        ],
+      },
       { type: 'h1', text: 'Overview' },
       {
         type: 'p',

@@ -5,10 +5,16 @@ import ArchivePage from './pages/ArchivePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import CaseStudyPage from './pages/CaseStudyPage.jsx'
+import { useProjectsIndexPath } from './hooks/useMobileViewport.js'
 
 function LegacyArchiveSlugRedirect() {
   const { slug } = useParams()
   return <Navigate to={`/projects/${slug}`} replace />
+}
+
+function RedirectToProjectsIndex() {
+  const path = useProjectsIndexPath()
+  return <Navigate to={path} replace />
 }
 
 export default function App() {
@@ -23,7 +29,7 @@ export default function App() {
           element={<Navigate to="/projects/dealer-theme-portal" replace />}
         />
         <Route path="/projects/:slug" element={<CaseStudyPage />} />
-        <Route path="/archive" element={<Navigate to="/projects" replace />} />
+        <Route path="/archive" element={<RedirectToProjectsIndex />} />
         <Route
           path="/archive/:slug"
           element={<LegacyArchiveSlugRedirect />}
