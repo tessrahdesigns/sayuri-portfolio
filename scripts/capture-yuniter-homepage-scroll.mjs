@@ -1,6 +1,9 @@
 /**
  * Captures Yuniter homepage while scrolling viewport, then stitches frames into an animated GIF
- * via ffmpeg-static. Run: npm run capture:yuniter-gif (after Playwright chromium install).
+ * via ffmpeg-static. Not installed by default (keeps CI/simple installs lean).
+ *
+ * One-time: npm install -D playwright ffmpeg-static && npx playwright install chromium
+ * Run: npm run capture:yuniter-gif
  */
 
 import { mkdirSync, rmSync, readdirSync, existsSync } from 'node:fs'

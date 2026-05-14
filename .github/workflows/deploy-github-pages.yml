@@ -30,11 +30,12 @@ jobs:
           else
             echo "path=/$NAME/" >> "$GITHUB_OUTPUT"
           fi
-      - name: Install and build
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
         env:
           VITE_BASE_PATH: ${{ steps.base.outputs.path }}
-          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
-        run: npm ci && npm run build
+        run: npm run build
       - name: SPA fallback and Jekyll bypass
         run: cp dist/index.html dist/404.html && touch dist/.nojekyll
       - uses: actions/upload-pages-artifact@v3
