@@ -33,6 +33,7 @@ jobs:
       - name: Install and build
         env:
           VITE_BASE_PATH: ${{ steps.base.outputs.path }}
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
         run: npm ci && npm run build
       - name: SPA fallback and Jekyll bypass
         run: cp dist/index.html dist/404.html && touch dist/.nojekyll
