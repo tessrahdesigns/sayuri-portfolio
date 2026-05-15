@@ -23,13 +23,7 @@ jobs:
           node-version: '22'
           cache: npm
       - id: base
-        run: |
-          NAME="${{ github.event.repository.name }}"
-          if [[ "$NAME" == *.github.io ]]; then
-            echo "path=/" >> "$GITHUB_OUTPUT"
-          else
-            echo "path=/$NAME/" >> "$GITHUB_OUTPUT"
-          fi
+        run: echo "path=/" >> "$GITHUB_OUTPUT"
       - name: Install dependencies
         run: npm ci
       - name: Build
