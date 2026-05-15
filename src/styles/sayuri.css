@@ -154,6 +154,40 @@ header {
   font-style: italic;
 }
 
+.hero-type-caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.88em;
+  margin-left: 0.08em;
+  vertical-align: -0.04em;
+  background: currentColor;
+  opacity: 1;
+  animation: hero-caret-blink 1.05s step-end infinite;
+}
+
+.hero-type-caret--typing {
+  margin-left: 0;
+  animation: none;
+}
+
+@keyframes hero-caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-type-caret {
+    animation: none;
+    opacity: 1;
+  }
+
+  .hero-type-caret--typing {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 .case-studies {
   padding: 120px 0;
 }
