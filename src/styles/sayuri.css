@@ -2190,6 +2190,7 @@ nav.nav--case-study .nav-links .nav-open-work {
   text-align: center;
 }
 
+.menu-overlay {
   position: fixed;
   inset: 0;
   background: linear-gradient(135deg, #fffcfd 0%, #fff0f6 100%);
@@ -2197,6 +2198,10 @@ nav.nav--case-study .nav-links .nav-open-work {
   display: flex;
   flex-direction: column;
   padding: 40px 8vw;
+  padding-top: max(40px, env(safe-area-inset-top));
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .gradient-wash {
