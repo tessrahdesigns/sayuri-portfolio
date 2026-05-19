@@ -21,8 +21,7 @@ export function useMobileViewport() {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 }
 
-/** Projects listing is hidden on mobile; use `/` instead of `/projects`. */
+/** Canonical path for the projects listing (all viewports). */
 export function useProjectsIndexPath() {
-  const mobile = useMobileViewport()
-  return mobile ? '/' : '/projects'
+  return '/projects'
 }

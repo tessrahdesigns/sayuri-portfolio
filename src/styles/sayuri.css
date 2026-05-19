@@ -248,7 +248,15 @@ nav.nav--case-study .nav-open-work {
 }
 
 .featured-study {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 48px);
+  align-items: center;
+  max-width: min(1180px, 100%);
+  margin-inline: auto;
+  padding: 0 8vw;
   margin-bottom: clamp(88px, 12vw, 140px);
+  box-sizing: border-box;
 }
 
 .featured-study:last-of-type {
@@ -256,23 +264,24 @@ nav.nav--case-study .nav-open-work {
 }
 
 .featured-study__media {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-top: clamp(28px, 5vw, 56px);
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
   background: var(--bg);
-  border-top: 0.5px solid var(--border);
-  border-bottom: 0.5px solid var(--border);
+  border: 0.5px solid var(--border);
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(16px, 3vw, 32px);
+  padding: clamp(14px, 2.5vw, 28px);
   box-sizing: border-box;
+  min-width: 0;
 }
 
 .featured-study__media img {
   width: 100%;
-  max-height: min(560px, 62vh);
+  max-height: min(420px, 52vh);
   height: auto;
   object-fit: contain;
   object-position: center;
@@ -280,9 +289,10 @@ nav.nav--case-study .nav-open-work {
 }
 
 .featured-study__content {
-  padding: clamp(32px, 5vw, 52px) 8vw 0;
-  max-width: min(42rem, 100%);
-  margin: 0 auto;
+  padding: 0;
+  max-width: none;
+  margin: 0;
+  min-width: 0;
   box-sizing: border-box;
 }
 
@@ -535,10 +545,12 @@ nav.nav--case-study .nav-open-work {
   list-style: none;
   margin: 0;
   padding: 0;
-  max-width: min(42rem, 100%);
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2rem, 5vw, 2.85rem);
+  max-width: min(920px, 100%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
 }
 
 .testimonials__item {
@@ -995,12 +1007,6 @@ footer.footer--projects {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%) brightness(1.05);
-  transition: filter 0.8s ease;
-}
-
-.profile-img-container:hover img {
-  filter: grayscale(0%);
 }
 
 .bio-content {
@@ -2414,8 +2420,12 @@ nav.menu-overlay-nav {
   }
 
   .credibility-stats__inner {
-    flex-direction: column;
-    gap: clamp(22px, 5vw, 30px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(14px, 4vw, 22px);
+    row-gap: clamp(26px, 6vw, 34px);
+    justify-items: center;
+    align-items: start;
   }
 
   .credibility-stats__sep {
@@ -2425,10 +2435,12 @@ nav.menu-overlay-nav {
   .credibility-stats__item {
     flex: none;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .credibility-stats__label {
-    max-width: 17rem;
+    max-width: 100%;
   }
 
   .case-studies .section-label,
@@ -2473,6 +2485,12 @@ nav.menu-overlay-nav {
     margin-bottom: 28px;
   }
 
+  .testimonials__list {
+    grid-template-columns: 1fr;
+    max-width: min(42rem, 100%);
+    gap: clamp(2rem, 5vw, 2.85rem);
+  }
+
   .testimonials__quote p {
     font-size: clamp(1.02rem, 4.2vw, 1.14rem);
   }
@@ -2483,6 +2501,11 @@ nav.menu-overlay-nav {
   }
 
   .featured-study {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    max-width: none;
+    margin-inline: 0;
+    padding: 0;
     margin-bottom: 52px;
   }
 
@@ -2491,6 +2514,15 @@ nav.menu-overlay-nav {
   }
 
   .featured-study__media {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: clamp(28px, 5vw, 56px);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
     padding: clamp(10px, 2.5vw, 18px);
   }
 
@@ -2499,9 +2531,9 @@ nav.menu-overlay-nav {
   }
 
   .featured-study__content {
-    padding-top: 22px;
-    padding-left: 8vw;
-    padding-right: 8vw;
+    max-width: min(42rem, 100%);
+    margin-inline: auto;
+    padding: clamp(24px, 4vw, 40px) 8vw 0;
   }
 
   .featured-study__title {
