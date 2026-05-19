@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import CaseStudyMoreProjects from './CaseStudyMoreProjects.jsx'
 import { publicUrl } from '../../utils/publicUrl.js'
 import NarrativeImageLightbox from './NarrativeImageLightbox.jsx'
 
@@ -217,7 +218,7 @@ function MetaValueLines({ lines }) {
   )
 }
 
-export default function CaseStudyView({ data }) {
+export default function CaseStudyView({ data, slug }) {
   const heroImgRef = useRef(null)
 
   useEffect(() => {
@@ -329,6 +330,8 @@ export default function CaseStudyView({ data }) {
             )}
           </div>
         </section>
+
+        <CaseStudyMoreProjects currentSlug={slug} />
       </main>
     </>
   )

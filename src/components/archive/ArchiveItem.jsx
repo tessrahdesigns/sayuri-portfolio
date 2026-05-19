@@ -9,7 +9,13 @@ export default function ArchiveItem({ item }) {
       </div>
       <div className="projects-item-content">
         <div>
-          <span className="projects-item-meta">{item.meta}</span>
+          <div className="projects-item-meta-row">
+            <span className="projects-item-year">{item.year}</span>
+            <span className="projects-item-meta-sep" aria-hidden="true">
+              ·
+            </span>
+            <span className="projects-item-meta">{item.meta}</span>
+          </div>
           <h3 className="projects-item-title">{item.title}</h3>
         </div>
         <div className="projects-item-tags">{item.tagsLine}</div>

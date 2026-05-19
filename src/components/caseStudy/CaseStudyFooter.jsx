@@ -1,15 +1,8 @@
-import { Link } from 'react-router-dom'
-
-export default function CaseStudyFooter({ nextSlug, nextTitle }) {
-  const label = `NEXT PROJECT: ${nextTitle.toUpperCase()} →`
-
+export default function CaseStudyFooter() {
   return (
     <footer className="footer--case-study">
-      <div className="footer-bottom">
+      <div className="footer-bottom footer-bottom--case-study">
         <span>©2026 TESSRAH DESIGN STUDIO. ALL RIGHTS RESERVED.</span>
-        <Link to={`/projects/${nextSlug}`} className="case-study-footer-next">
-          {label}
-        </Link>
       </div>
     </footer>
   )

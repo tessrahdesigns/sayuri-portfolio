@@ -8,10 +8,7 @@ import {
 } from '../auth/caseStudyAccess.js'
 import CaseStudyAccessGate from '../components/caseStudy/CaseStudyAccessGate.jsx'
 import CaseStudyShell from '../components/caseStudy/CaseStudyShell.jsx'
-import {
-  CASE_STUDY_BY_SLUG,
-  getNextCaseStudy,
-} from '../data/caseStudyDetail.js'
+import { CASE_STUDY_BY_SLUG } from '../data/caseStudyDetail.js'
 import { useProjectsIndexPath } from '../hooks/useMobileViewport.js'
 
 export default function CaseStudyPage() {
@@ -63,13 +60,10 @@ export default function CaseStudyPage() {
     )
   }
 
-  const next = getNextCaseStudy(slug)
-
   return (
     <CaseStudyShell
       data={data}
-      nextSlug={next.slug}
-      nextTitle={next.title}
+      slug={slug}
     />
   )
 }

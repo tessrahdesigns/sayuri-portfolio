@@ -2,6 +2,14 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useMobileNav } from '../context/MobileNavContext.jsx'
 
+function NavOpenToWorkBadge() {
+  return (
+    <span className="nav-open-work">
+      Open to work
+    </span>
+  )
+}
+
 function CaseStudyNav({ menuToggle }) {
   const [hidden, setHidden] = useState(false)
   const lastY = useRef(typeof window !== 'undefined' ? window.scrollY : 0)
@@ -68,6 +76,7 @@ function CaseStudyNav({ menuToggle }) {
         <Link to="/projects">[ 01 ] PROJECTS</Link>
         <Link to="/about">[ 02 ] ABOUT</Link>
         <Link to="/contact">[ 03 ] CONTACT</Link>
+        <NavOpenToWorkBadge />
       </div>
       {menuToggle}
     </nav>
@@ -114,6 +123,7 @@ export default function Nav({ variant = 'home' }) {
         <NavLink to="/contact" className={navLinkClass}>
           [ 03 ] CONTACT
         </NavLink>
+        <NavOpenToWorkBadge />
       </div>
       {menuToggle}
     </nav>

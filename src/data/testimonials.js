@@ -1,26 +1,26 @@
-/** @typedef {{ id: string, quote: string, name: string, role: string }} Testimonial */
+/** Portfolio testimonials (home + about) */
 
-/** @type {Testimonial[]} */
-export const TESTIMONIALS = [
+/** @typedef {{
+ *   id: string,
+ *   quote: string,
+ *   author: string,
+ *   roleLine: string,
+ * }} HomeTestimonial */
+
+/** @type {HomeTestimonial[]} */
+export const HOME_TESTIMONIALS = [
   {
-    id: 't1',
+    id: 'matthew-morris-bimm',
     quote:
-      'Tessrah is the ultimate hype-woman. Her energy is truly infectious, and she has an incredible ability to lift the mood of any room she walks into, making even the most stressful deadlines feel manageable.',
-    name: 'Laura O.',
-    role: 'UX Lead',
+      "Tessrah lead major UX projects on Audi and Angel's Envy bourbon. Tessrah has a mind for understanding large experiences and synthesizing them into key insights. Her skills lead to larger opportunities with our clients, notably gaining more website business after her UX audit project with Angel's Envy.",
+    author: 'Matthew Morris',
+    roleLine: 'UI Lead at BIMM',
   },
   {
-    id: 't2',
+    id: 'linh-nguyen-bimm',
     quote:
-      "She doesn't just manage projects; she masters them. Tessrah is a fierce advocate for her clients, combining a sharp attention to detail with a relentless drive to ensure every piece of work delivered is of the highest standard.",
-    name: 'Ayesha S.',
-    role: 'Product Manager',
-  },
-  {
-    id: 't3',
-    quote:
-      'What makes Tessrah so special is her genuine heart. She is the glue that holds the team together, always checking in on her colleagues and offering support, proving that her kindness is just as powerful as her work ethic.',
-    name: 'Jessica Z.',
-    role: 'UI Designer',
+      "I truly enjoyed collaborating with Tessrah. She is the definition of a team player who fosters an inclusive environment by actively listening to everyone's perspectives. Beyond her collaborative spirit, she is incredibly organized and detail-oriented, ensuring she consults a wide range of sources before delivering well-researched, high-impact recommendations.",
+    author: 'Linh Nguyen',
+    roleLine: 'Product Designer at BIMM',
   },
 ]

@@ -6,8 +6,9 @@ import { publicUrl } from '../utils/publicUrl.js'
 const RESUME_PDF = '/Tessrah_Mahalingam_-_Senior_Product_Designer_2026.pdf'
 
 const MENU_LINKS = [
-  { to: '/about', num: '01', label: 'About' },
-  { to: '/contact', num: '02', label: 'Contact' },
+  { to: '/projects', num: '01', label: 'Projects' },
+  { to: '/about', num: '02', label: 'About' },
+  { to: '/contact', num: '03', label: 'Contact' },
 ]
 
 const SOCIAL_LINKS = [
@@ -68,9 +69,12 @@ export default function MobileMenu() {
       <div className="gradient-wash" aria-hidden />
 
       <nav className="menu-overlay-nav">
-        <Link to="/" className="logo" onClick={closeMenu}>
-          Tessrah.
-        </Link>
+        <div className="menu-overlay-nav-start">
+          <Link to="/" className="logo" onClick={closeMenu}>
+            Tessrah.
+          </Link>
+          <span className="nav-open-work">Open to work</span>
+        </div>
         <button type="button" className="close-btn" onClick={closeMenu}>
           [ CLOSE ]
         </button>

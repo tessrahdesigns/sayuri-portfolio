@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { publicUrl } from '../../utils/publicUrl.js'
+import AboutSkillsStrip from './AboutSkillsStrip.jsx'
 import Timeline from './Timeline.jsx'
-import TestimonialsCarousel from './TestimonialsCarousel.jsx'
+import Testimonials from '../Testimonials.jsx'
 
 const PORTRAIT_SRC = '/images/tessrah-mahalingam.png'
 
@@ -48,17 +49,20 @@ export default function About() {
               deliver designs that are both beautiful and functional.
             </p>
             <p>
-              I believe great design is invisible. It guides users naturally,
-              anticipates their needs, and creates delightful moments that keep them
-              coming back.
+              I believe great design is invisible — it guides users naturally and anticipates needs without demanding
+              attention. At a senior level, that means making the right trade-offs early: understanding business
+              constraints, advocating for users in rooms where they aren&apos;t present, and shipping work that&apos;s
+              both beautiful and measurably useful.
             </p>
           </div>
         </div>
       </section>
 
-      <TestimonialsCarousel />
+      <AboutSkillsStrip />
 
       <Timeline />
+
+      <Testimonials variant="about" />
     </main>
   )
 }

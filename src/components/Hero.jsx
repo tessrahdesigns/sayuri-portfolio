@@ -1,12 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { publicUrl } from '../utils/publicUrl.js'
+
+const RESUME_PDF = '/Tessrah_Mahalingam_-_Senior_Product_Designer_2026.pdf'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/tessrah/'
 
 /** Plain + accent fragments; typing walks characters in visual order */
 const TITLE_SEGMENTS = [
   { text: "Hello, I'm ", accent: false },
   { text: 'Tessrah', accent: true },
-  { text: ', a senior product designer based in the ', accent: false },
-  { text: 'Greater Toronto Area', accent: true },
-  { text: '.', accent: false },
+  {
+    text: ', a senior product designer specializing in enterprise UX and scalable design systems — based in ',
+    accent: false,
+  },
+  { text: 'Toronto', accent: true },
+  { text: ', open globally.', accent: false },
 ]
 
 const HERO_TITLE_ARIA_LABEL = TITLE_SEGMENTS.map((s) => s.text).join('')
@@ -80,7 +87,7 @@ export default function Hero() {
   const typingComplete = revealedChars >= totalChars
 
   return (
-    <header>
+    <header className="hero-header">
       <div className="hero-meta">EST. 2012 / TORONTO</div>
       <h1 className="hero-title" aria-label={HERO_TITLE_ARIA_LABEL}>
         <span aria-hidden="true">
@@ -92,6 +99,24 @@ export default function Hero() {
           />
         </span>
       </h1>
+      <div className="hero-actions">
+        <a
+          href={publicUrl(RESUME_PDF)}
+          target="_blank"
+          rel="noreferrer"
+          className="action-link"
+        >
+          Resume / CV ↓
+        </a>
+        <a
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="action-link"
+        >
+          LinkedIn ↗
+        </a>
+      </div>
     </header>
   )
 }
