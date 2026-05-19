@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useMobileNav } from '../context/MobileNavContext.jsx'
 
 function NavOpenToWorkBadge() {
@@ -75,7 +75,8 @@ function CaseStudyNav({ menuToggle }) {
       <div className="nav-links nav-links--desktop">
         <Link to="/projects">[ 01 ] PROJECTS</Link>
         <Link to="/about">[ 02 ] ABOUT</Link>
-        <Link to="/contact">[ 03 ] CONTACT</Link>
+        <Link to="/journal">[ 03 ] JOURNAL</Link>
+        <Link to="/contact">[ 04 ] CONTACT</Link>
         <NavOpenToWorkBadge />
       </div>
       {menuToggle}
@@ -84,6 +85,7 @@ function CaseStudyNav({ menuToggle }) {
 }
 
 export default function Nav({ variant = 'home' }) {
+  const { pathname } = useLocation()
   const { openMenu } = useMobileNav()
 
   const menuToggle = (
@@ -106,7 +108,9 @@ export default function Nav({ variant = 'home' }) {
       ? 'nav--projects'
       : variant === 'about'
         ? 'nav--about'
-        : undefined
+        : variant === 'journal'
+          ? 'nav--journal'
+          : undefined
 
   return (
     <nav className={navClass}>
@@ -120,8 +124,16 @@ export default function Nav({ variant = 'home' }) {
         <NavLink to="/about" className={navLinkClass}>
           [ 02 ] ABOUT
         </NavLink>
+        <NavLink
+          to="/journal"
+          className={({ isActive }) =>
+            isActive || pathname.startsWith('/journal/') ? 'active' : undefined
+          }
+        >
+          [ 03 ] JOURNAL
+        </NavLink>
         <NavLink to="/contact" className={navLinkClass}>
-          [ 03 ] CONTACT
+          [ 04 ] CONTACT
         </NavLink>
         <NavOpenToWorkBadge />
       </div>

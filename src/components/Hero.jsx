@@ -9,7 +9,7 @@ const TITLE_SEGMENTS = [
   { text: "Hello, I'm ", accent: false },
   { text: 'Tessrah', accent: true },
   {
-    text: ', a senior product designer specializing in enterprise UX and scalable design systems — based in ',
+    text: ', a senior product designer specializing in enterprise UX — based in ',
     accent: false,
   },
   { text: 'Toronto', accent: true },

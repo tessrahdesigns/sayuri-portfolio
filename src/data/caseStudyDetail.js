@@ -51,7 +51,7 @@ export const CASE_STUDY_BY_SLUG = {
     heroTitleLine1: 'Audi North America',
     heroTitleAccent: 'Dealer Ecosystem.',
     sidebar: {
-      timeline: 'Dec 2023 —\u00a0Dec 2024',
+      timeline: 'Dec 2023 —\u00a0Dec 2024 · 12 months · 2023–2024',
       role: ['UX Designer'],
       toolsLabel: 'UX Methodologies',
       tools: [
@@ -234,12 +234,12 @@ export const CASE_STUDY_BY_SLUG = {
   },
 
   'dealer-theme-portal': {
-    docTitle: 'Automotive Dealer Theme Management Portal — Case Study — TESSRAH',
+    docTitle: 'Dealer Theme Management Portal — Case Study — TESSRAH',
     railId: 'CASE_STUDY: DEALER_THEME_MGMT / MAR_2025',
     heroImage: '/images/dealer-theme-management-portal-hero.png',
     heroImageAlt:
       'Desktop setup on a wooden desk: monitor showing the Dealer Theme portal Edit Dealer view—Audi Queens in the sidebar with enrolment status, and Preview Dealer Theme with vehicle imagery, dealer bar, QR code, attachments, and Save',
-    heroKicker: 'Automotive · Admin & Activation',
+    heroKicker: 'Automotive · Admin & Activation · MVP',
     heroTitleLine1: 'Dealer Theme',
     heroTitleAccent: 'Portal.',
     sidebar: {
@@ -413,7 +413,7 @@ export const CASE_STUDY_BY_SLUG = {
     heroTitleLine1: 'Yuniter',
     heroTitleAccent: 'Empowering marketing independence.',
     sidebar: {
-      timeline: 'Dec 2021 —\u00a0Dec 2022',
+      timeline: 'Dec 2021 —\u00a0Dec 2022 · 12 months · 2021–2022',
       role: ['UI/UX Designer'],
       toolsLabel: 'Platform',
       tools: ['Cloud-based SaaS Dashboard', 'Figma'],
@@ -1001,11 +1001,11 @@ export const CASE_STUDY_BY_SLUG = {
     heroImage: '/images/nourish-pcos-hero.png',
     heroImageAlt:
       'Hands holding a smartphone displaying the Nourish My PCOS home screen—Recipe Generator, Meal Analyzer, Cravings Coach, and optional cycle phase pills—over a marble table with coffee and notebook',
-    heroKicker: 'AI · Nutrition · PCOS',
+    heroKicker: 'AI · Nutrition',
     heroTitleLine1: 'Nourish',
     heroTitleAccent: 'Nutrition coach for PCOS.',
     sidebar: {
-      timeline: 'February 2025',
+      timeline: '1 day · February 2025',
       role: ['Agentic Product Designer'],
       toolsLabel: 'Tools',
       tools: ['Lovable', 'AI-assisted development (Vibe Coding)'],

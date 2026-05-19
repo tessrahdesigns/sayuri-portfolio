@@ -3,6 +3,8 @@ import ScrollToTop from './components/ScrollToTop.jsx'
 import HomePage from './pages/HomePage.jsx'
 import ArchivePage from './pages/ArchivePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
+import JournalPage from './pages/JournalPage.jsx'
+import JournalArticlePage from './pages/JournalArticlePage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import CaseStudyPage from './pages/CaseStudyPage.jsx'
 import { useProjectsIndexPath } from './hooks/useMobileViewport.js'
@@ -35,6 +37,8 @@ export default function App() {
           element={<LegacyArchiveSlugRedirect />}
         />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/journal" element={<JournalPage />} />
+        <Route path="/journal/:slug" element={<JournalArticlePage />} />
         <Route path="/info" element={<Navigate to="/about" replace />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
